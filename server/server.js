@@ -1,17 +1,18 @@
 const express = require('express');
 const sequelize = require('./config/connection')
-
+const routes = require('./routes')
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-
+// middleware fo parsing data
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+app.use(routes);
 
 const Menu = require('./models/Menu');
-
+const Order = require('./models/Order') 
 
 // sets up server and db using sequelize
 sequelize.sync().then(()=>{
