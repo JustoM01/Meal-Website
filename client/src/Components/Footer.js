@@ -1,12 +1,11 @@
-// Footer.js
-
 import React from 'react';
-
+import './Src.css'
 const Footer = () => {
   return (
-    <footer className='footer' style={{ backgroundColor: 'gray', position: 'absolute', bottom: 0, width: '100%', padding: '10px' }} >
-   
-      &copy; 2024 Your Website
+    <footer className='footer'>
+
+
+
     </footer>
   );
 };

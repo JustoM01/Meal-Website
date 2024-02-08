@@ -38,6 +38,10 @@ Menu.init(
             type:DataTypes.INTEGER,
             allowNull:false
           },
+          image:{
+            type:DataTypes.BLOB,
+            allowNull:true
+          },
           
     },
 

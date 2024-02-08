@@ -13,7 +13,7 @@ const Naviagtion= () => {
       <Navbar expand="lg" className="bg-body-tertiary">
        <Container>
    
-       <Navbar.Brand href="#home">Meal Prep</Navbar.Brand>
+       <Navbar.Brand href="/">Meal Prep</Navbar.Brand>
 
 
   
