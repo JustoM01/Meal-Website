@@ -1,42 +1,44 @@
 import React from 'react'
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+// import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 
 
 
 const Naviagtion= () => {
   return (
-    <div>
-      <Navbar expand="lg" className="bg-body-tertiary">
-       <Container>
-   
-       <Navbar.Brand href="/">Meal Prep</Navbar.Brand>
-
+    <div  style={{marginLeft:'80px', fontSize:'25px', textShadow: '2px 2px 3px rgba(0, 0, 0, 0.5)'}}>  
 
   
 
-       <Nav className="me-auto">
 
-       <Nav.Link as={Link} to="/menu" >
-              Menu
-            </Nav.Link>
+<Navbar >
+
+<Navbar.Brand href="/">Meal Prep</Navbar.Brand>
+
+       <NavDropdown style={{marginLeft:'10px'}} title="MENU" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to ="/">Macro Friendly</NavDropdown.Item>
+              <NavDropdown.Item href="/">
+                Vegeterian
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to ="/">Family Style</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to ="/menu">All</NavDropdown.Item>
+            </NavDropdown>
     
 
-       <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+       <NavDropdown  style={{marginLeft:'10px'}} title="More" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to ="/">About us</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Contact us
               </NavDropdown.Item>
             </NavDropdown>
-</Nav>
 
+            </Navbar>
 
-
-      </Container>
-    </Navbar>
+            
+   
 
 
 

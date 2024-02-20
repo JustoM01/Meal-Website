@@ -25,15 +25,17 @@ const Menu = () => {
   }, []); 
 
   return (
+
     <div className='main-menu' >
+   
    <h1
    style={{textAlign:'center'}}
    >Our Selection</h1>
 
-      <div className="row">
+      <div className="row" style={{paddingLeft:'100px'}} >
             {menuData.map((menuItem) => (
-          <div key={menuItem.id} className="col-md-4 mb-3">
-              <Card style={{ width: '18rem' }}>
+          <div key={menuItem.id} className="col-md-4 mb-3" >
+              <Card style={{ width: '18rem', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'  }}>
               <Card.Img variant="top" src={image} alt={menuItem.name} />
               <Card.Body>
                 <Card.Title>{menuItem.name}</Card.Title>
@@ -45,8 +47,9 @@ const Menu = () => {
           </div>
         ))}
 
-
       </div>
+
+
     </div>
   );
 };
